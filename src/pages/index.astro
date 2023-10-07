@@ -1,0 +1,29 @@
+---
+import '../styles/moonwalk.scss'
+import '../styles/global.css'
+import Header from '../components/Header.astro';
+import Credits from '../components/credits.astro';
+
+---
+
+<html lang="en" data-theme = "dark">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/x+icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+
+		<title>Home</title>
+	</head>
+	<body>
+		<main class = "hmain">
+      <Header />
+      <h1> Hello! I'm darkdarcool. </h1>
+
+      <p> Welcome to my website/blog, where I rant, educate, and shitpost. </p>
+
+      <p> If you're interested in contacting me, you can catch me on discord <a href = "https://discord.com/users/707297868201066506">here</a>. </p>
+      <Credits />
+    </main>
+	</body>
+</html>

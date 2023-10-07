@@ -1,0 +1,21 @@
+.hmain {
+  display: block;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 4em 2em;
+}
+
+.main {
+  display: block;
+}
+
+
+pre {
+  border-radius: 8px !important;
+  margin: 1.2em 0 !important;
+  padding: 1.2em;
+}
+
+pre code {
+  padding: 0;
+}

@@ -1,0 +1,20 @@
+---
+import PostLayout from '../../layouts/PostLayout.astro';
+import getPostData from '../../utils/getPostData';
+
+export async function getStaticPaths() {
+  const posts = await Astro.glob('../content/*.md');
+  return posts.map(p => ({
+    params: { slug: p.file.split('/').pop()!.split('.').shift() },
+    props: { post: p },
+  }));
+}
+
+const { Content, frontmatter } = Astro.props.post;
+const { title, description, date } = frontmatter;
+const { slug, readingTime } = getPostData(Astro.props.post);
+---
+
+<PostLayout title={title} description={description} date={date + " ~ " + readingTime}>
+  <Content />
+</BaseLayout>

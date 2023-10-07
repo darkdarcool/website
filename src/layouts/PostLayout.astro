@@ -1,0 +1,31 @@
+---
+import Header from '../components/Header.astro';
+import Credits from '../components/Credits.astro';
+
+export interface Props {
+  title: string;
+  description: string;
+  date: string;
+}
+const { title, description, date } = Astro.props;
+---
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/x+icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+</head>
+<body>
+  <main class="main" class = "page-content" aria-label="Content">
+    <div class="w">
+      <Header />
+      <h1 class="post-title">{title}</h1>
+      <p class="post-date text-bold">{date}</p>
+      <slot />
+    </div>
+    <Credits />
+  </main>
+</body>
+</html>
