@@ -1,6 +1,6 @@
 ---
 title: Minecraft Protocol
-description: A simple article on how to get started
+description: An article on how to get started
 date: 11.28.2023
 ---
 > Note: I only talk about being a client, I might talk about being a server in the future
